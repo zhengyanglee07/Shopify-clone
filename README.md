@@ -1,3 +1,12 @@
+Shopify - clone
+
+![image](https://user-images.githubusercontent.com/72369942/127765551-4a835810-211e-4724-a28c-c84112b84da9.png)
+{Images from Admin pages}
+
+![image](https://user-images.githubusercontent.com/72369942/127765608-796f9645-a877-4948-8358-a5e1fb23adb3.png)
+{Images from Site pages}
+
+
 ## 🤗 Requirements
 
 ```
