@@ -217,7 +217,7 @@ export default {
       discount: 0,
       total: this.$route.params.subTotal,
       form: new Form({
-        userId: this.$parent.userId,
+        userId: "",
         email: "",
         firstName: "",
         lastName: "",
@@ -287,6 +287,7 @@ export default {
         });
     },
     addOrder() {
+      this.order.userId = this.$parent.userId;
       this.order.total = this.total;
       axios.post('/api/orders', this.order).then((response) => {
         console.log(response);
@@ -299,8 +300,10 @@ export default {
     },
   },
   created() {
+    console.log('userId: ' + this.$parent.userId);
+    this.order.userId = this.$parent.userId;
     axios.get('/api/stores/getId/' + this.$session.get('store')).then((response) => {
-      this.order.userId = response.data.store.id;
+      // this.order.userId = response.data.store.id;
     })
     this.product = this.$session.get("product");
     if (this.$session.get("userId")) {
